@@ -1,0 +1,47 @@
+.tab {
+  height: 600px;
+  width: 600px;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+
+.tab .nav {
+  height: 60px;
+}
+
+.tab .nav-item {
+  width: 200px;
+  height: 100%;
+  float: left;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  line-height: 60px;
+}
+
+.tab .nav-item:hover {
+  cursor: pointer;
+}
+
+.tab .nav-item.current {
+  color: #fff;
+  background-color: #222;
+}
+
+.tab .page {
+  height: 540px;
+  position: relative;
+}
+
+.tab .page-item {
+  height: 100%;
+  width: 600px;
+  position: absolute;
+  text-align: center;
+  line-height: 540px;
+  font-size: 54px;
+  display: none;
+}
+
+.tab .page-item.current {
+  display: block;
+}
