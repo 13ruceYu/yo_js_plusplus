@@ -1,6 +1,6 @@
 ; (function (doc, tools) {
-  var Tab = function () {
-    var oTab = doc.getElementsByClassName('J_tab')[0],
+  var Tab = function (options) {
+    var oTab = doc.querySelector(options.el),
       oPage = oTab.getElementsByClassName('page')[0];
 
     this.oNav = oTab.getElementsByClassName('nav')[0];
@@ -8,16 +8,7 @@
     this.oPageItems = oTab.getElementsByClassName('page-item');
 
     this.curIdx = 0;
-    this.classObj = {
-      navItem: {
-        origin: 'nav-item',
-        current: 'nav-item current'
-      },
-      pageItem: {
-        origin: 'page-item',
-        current: 'page-item current'
-      }
-    }
+    this.classObj = options.classObj
   }
 
   Tab.prototype.init = function () {

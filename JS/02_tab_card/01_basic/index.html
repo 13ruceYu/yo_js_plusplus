@@ -25,7 +25,21 @@
   <script src="./utils/tools.js"></script>
   <script src="./js/index.js"></script>
   <script>
-    var tab = new Tab();
+    var tab = new Tab(
+      {
+        el: '.J_tab',
+        classObj: {
+          navItem: {
+            origin: 'nav-item',
+            current: 'nav-item current'
+          },
+          pageItem: {
+            origin: 'page-item',
+            current: 'page-item current'
+          }
+        }
+      }
+    );
     tab.init();
   </script>
 </body>
