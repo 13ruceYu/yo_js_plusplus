@@ -1,0 +1,48 @@
+.tab {
+  border: 2px solid pink;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.tab .nav {
+  height: 40px;
+}
+
+.tab .nav-item {
+  float: left;
+  border-bottom: 2px solid pink;
+  width: 200px;
+  height: 100%;
+  line-height: 40px;
+  text-align: center;
+}
+
+.tab .nav-item:hover {
+  cursor: pointer;
+}
+
+.tab .nav-item.current {
+  background-color: pink;
+  color: skyblue;
+  font-weight: bold;
+}
+
+.tab .page {
+  position: relative;
+  height: 560px;
+}
+
+.tab .page-item {
+  position: absolute;
+  width: 600px;
+  height: 100%;
+  text-align: center;
+  line-height: 540px;
+  font-size: 64px;
+  display: none;
+}
+
+.tab .page-item.current {
+  display: block;
+}
