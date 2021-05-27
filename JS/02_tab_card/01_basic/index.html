@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
   <title>Tab</title>
-  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
   <div class="tab J_tab">
     <div class="nav">
-      <div class="nav-item current">nav-1</div>
-      <div class="nav-item">nav-2</div>
-      <div class="nav-item">nav-3</div>
+      <div class="nav-item current">tab-1</div>
+      <div class="nav-item">tab-2</div>
+      <div class="nav-item">tab-3</div>
     </div>
     <div class="page">
       <div class="page-item current">page-1</div>
@@ -25,19 +25,22 @@
   <script src="./utils/tools.js"></script>
   <script src="./js/index.js"></script>
   <script>
-    var tab = new Tab({
-      el: '.J_tab',
-      classObj: {
-        navItem: {
-          origin: 'nav-item',
-          current: 'nav-item current'
-        },
-        pageItem: {
-          origin: 'page-item',
-          current: 'page-item current'
+    var tab = new Tab(
+      {
+        el: '.J_tab',
+        classObj: {
+          navItem: {
+            origin: 'nav-item',
+            current: 'nav-item current'
+          },
+          pageItem: {
+            origin: 'page-item',
+            current: 'page-item current'
+          }
         }
       }
-    }).init();
+    );
+    tab.init();
   </script>
 </body>
 

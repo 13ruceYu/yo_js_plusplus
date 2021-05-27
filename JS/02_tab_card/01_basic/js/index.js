@@ -4,20 +4,19 @@
       oPage = oTab.getElementsByClassName('page')[0];
 
     this.oNav = oTab.getElementsByClassName('nav')[0];
-    this.oNavItems = this.oNav.getElementsByClassName('nav-item');
-    this.oPageItems = oPage.getElementsByClassName('page-item');
+    this.oNavItems = oTab.getElementsByClassName('nav-item');
+    this.oPageItems = oTab.getElementsByClassName('page-item');
 
     this.curIdx = 0;
-
     this.classObj = options.classObj
   }
 
   Tab.prototype.init = function () {
-    this.bindEvent();
+    this.bindEvent()
   }
 
   Tab.prototype.bindEvent = function () {
-    this.oNav.addEventListener('click', this.onNavClick.bind(this), false);
+    this.oNav.addEventListener('click', this.onNavClick.bind(this), false)
   }
 
   Tab.prototype.onNavClick = function (ev) {
@@ -32,16 +31,14 @@
   }
 
   Tab.prototype.setCurrent = function (index, field) {
-    const navItemClass = this.classObj.navItem,
-      pageItemClass = this.classObj.pageItem;
     switch (field) {
-      case 'remove':
-        this.oNavItems[index].className = navItemClass.origin;
-        this.oPageItems[index].className = pageItemClass.origin;
-        break;
       case 'add':
-        this.oNavItems[index].className = navItemClass.current;
-        this.oPageItems[index].className = pageItemClass.current;
+        this.oNavItems[index].className = this.classObj.navItem.current;
+        this.oPageItems[index].className = this.classObj.pageItem.current;
+        break;
+      case 'remove':
+        this.oNavItems[index].className = this.classObj.navItem.origin;
+        this.oPageItems[index].className = this.classObj.pageItem.origin;
         break;
       default:
         break;
@@ -49,4 +46,4 @@
   }
 
   window.Tab = Tab;
-})(document, initModuleTools);
+})(document, initToolsModule);

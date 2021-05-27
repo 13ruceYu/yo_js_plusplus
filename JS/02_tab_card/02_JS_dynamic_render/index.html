@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Tab</title>
+</head>
+
+<body>
+  <div class="tab J_tab">
+    <!-- 所有内容由 JS 动态生成 -->
+  </div>
+
+  <script type="text/html" id="J_navItemTpl">
+    <div class="{{navStyleClass}}">{{navItemTitle}}</div>
+  </script>
+
+  <script type="text/html" id="J_pageItemTpl">
+    <div class="{{pageStyleClass}}">
+      <h1>{{cityName}}</h1>
+      <div>
+        <img src="{{img}}" alt="{{cityName}}">
+      </div>
+      <p>{{intro}}</p>
+    </div>
+  </script>
+
+  <div id="J_cityData" style="display: none;">
+    [
+    {
+    "id": "1",
+    "city_name": "杭州",
+    "intro": "上有天堂，下有苏杭。",
+    "img": "https://icrvb3jy.xinmedia.com/solomo/article/86678/60DBF084-5EC9-96B3-70EB-D47D80D17678.jpg"
+    },
+    {
+    "id": "2",
+    "city_name": "绍兴",
+    "intro": "鲁迅。"
+    },
+    {
+    "id": "3",
+    "city_name": "上海",
+    "intro": "上海就是浦东。"
+    }
+    ]
+  </div>
+
+  <script src="./utils/tools.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+    var tab = new Tab(
+      {
+        el: '.J_tab'
+      }
+    );
+    tab.init();
+  </script>
+</body>
+
+</html>
